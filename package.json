@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node atm.js"
-
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/deepsi82/ATMUserStories1/issues"
   },
-  "homepage": "https://github.com/deepsi82/ATMUserStories1#readme"
+  "homepage": "https://github.com/deepsi82/ATMUserStories1#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

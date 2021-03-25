@@ -1,1 +1,4 @@
-console.log("hello world");
+//console.log("hello world");
+"use strict"
+const atmMenu = require('./account');
+

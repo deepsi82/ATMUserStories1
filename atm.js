@@ -1,10 +1,12 @@
-"use strict"
-
-// function atm(pinNumber){
-//     let atmPin = promptFor("please enter your ATM pin number");
-//     let rightATMPin = pinNumber.filter() 
-    
+const account = require("./account.js");
 
 
-// }
-const account = require('./account')
+const promptfor = require("prompt-sync")();
+
+console.log("please enter your ATM pin number");
+const pin = promptfor();
+if(pin == account.pinNumber){
+    console.log("The entered pin number is valid");
+}else{
+    console.log("not the valid pin number");
+}
