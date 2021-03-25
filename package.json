@@ -1,0 +1,22 @@
+{
+  "name": "atmproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node atm.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepsi82/ATMUserStories1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepsi82/ATMUserStories1/issues"
+  },
+  "homepage": "https://github.com/deepsi82/ATMUserStories1#readme"
+}
