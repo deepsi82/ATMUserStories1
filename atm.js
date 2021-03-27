@@ -10,53 +10,52 @@ function atmMenu(){
         case 'Yes' :
             let isValidPin = pinNumber();
             if(isValidPin == true){
-            let getDetails = promptfor("please enter the details you want 'Balance' or 'Withdraw' or 'Deposit' : ");
+            let getDetails = promptfor("please enter the details you want :  'balance' or 'withdraw' or 'deposit' : ");
             let getDetailsResult;
+           
                 switch (getDetails){
-                    case 'Balance' :
+                    case 'balance' :
                         getDetailsResult = getBalance();
                         account.balanceAmount;
                         break;
-                    case 'Withdraw' :
+                    case 'withdraw' :
                         getDetailsResult = withDraw();
+                        account.balanceAmount;
                         break;    
-                    case 'Deposit' :
+                    case 'deposit' :
                         getDetailsResult = deposit();
+                        account.balanceAmount;
                         break;
-                default:
-                     break;
-                }
-            }   
-            break;
+                        // default:
+                        //     break;
+                    }
+                    atmMenu();
+            }    
+                  
         case 'No' :
-            userInput = promptfor("please enter Exit");
-            break;
-        default:
-            //atmMenu();
-            break;  
-    }
-}
+        console.log("Thank you for the using the ATM");
+        return;
         
-    
-    function pinNumber(){     
-    let getPin = promptfor("please enter your ATM pin number: ");
-    if(getPin == account.pinNumber){
-        console.log("The entered pin number is valid");
-        return true;
-     }else{
-        let getPin = promptfor("please enter your correct ATM pin number: ");
-
-
-    }
-    return getPin;
-    
+        }
 }
-        
- 
+
     
+function pinNumber(){     
+let getPin = promptfor("please enter your ATM pin number: ");
+if(getPin == account.pinNumber){
+    console.log("The entered pin number is valid");
+    return true;
+ }else{
+     console.log("The entered pin number is not valid");
+     return pinNumber();
+
+}
+
+}
+                
 function getBalance(){
     console.log("the balance amount is" + " " + account.balanceAmount);
-    return pinNumber;
+    return account.balanceAmount;
 }
 
 function withDraw(){
@@ -70,19 +69,22 @@ function withDraw(){
 
 function deposit(){
     const depositAmount = promptfor("please enter the amount to deposit : ");
-    //let finalBal = (account.balanceAmount + depositAmount);
     // account.balacenAmount : 1000
     // depositAmount : 600
-
     account.balanceAmount = account.balanceAmount + parseInt(depositAmount);
-
-    // finalBal : 1600
-
-
     console.log("the updated balance amount is " + " " + account.balanceAmount);
-    return;
+    return account.balanceAmount;
 }
 
 
+module.exports.balanceAmount = account.balanceAmount;
+console.log(module);
 module.exports.atmMenu = atmMenu;
+        
+    
+        
+ 
+    
+
+
 
